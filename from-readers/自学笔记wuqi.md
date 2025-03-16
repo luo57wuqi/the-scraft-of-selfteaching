@@ -29,3 +29,98 @@
 ```
 
 如这个作者的分享，每次写完demo，不断属性，就越容易发现，前一版本很差，比如在写一个自动化填写表单出现的下拉框，自己其实不会，在AI的帮助下我知道内嵌网页和下拉选择和ajax的下列表如何去使用js操作元素。在做一个分配的js代码中，我又发现分配思路写代码就几行，但是如何分配权重，从一开始说需求，到后来理解这个名字数字的权重如何编程名字字符串数组的generate过程后，可以提出自己的算法---最小的样本，均相混合的样本，然后重复样本到名字200个，比AI写出来的跟满足需求。
+
+
+
+## 比较上传文本
+
+```
+ssH 没有链接收集网络失败了---
+1 检测问题
+    1. 检查 SSH 连接
+    运行以下命令测试 SSH 连接：
+    ssh -T git@github.com
+    成功连接：显示 Hi 用户名! You've successfully authenticated。
+    连接失败：提示超时或权限错误。
+    ssh: connect to host github.com port 22: Connection timed out-----校园网的问题
+2 换成ssh 
+	git remote set-url origin git@github.com:用户名/仓库名.git 设置ssh传输
+	ssh -T git@github.com 验证
+2 换http  重新设置代理
+我的梯子的端口是 17890
+git config --global http.proxy http://127.0.0.1:7890
+git config --global https.proxy http://127.0.0.1:7890
+
+git remote set-url origin https://github.com/用户名/仓库名.git  the-scraft-of-selfteaching
+git remote set-url origin https://github.com/luo57wuqi/the-scraft-of-selfteaching.git
+
+3 检测代理
+```
+
+```
+如果找到你自己的梯子代理
+1 去安装的梯子的应用查看---我自己的梯子应用和官网没有
+2 去安装梯子的exe所在的文件夹，找到以 一个config的文件，记事本打开---里面可能有端口设置的 信息
+
+1 设置端口00没有设置无法访问国外资源---当然得有梯子（还有配置host DSNip ，不过我还不会）
+git config --global http.proxy http://127.0.0.1:7890
+git config --global https.proxy http://127.0.0.1:7890
+设置 git的获取https,http请求使用的端口代理 http://127.0.0.1:7890 和https://127.0.0.1:782 
+
+2 取消配置 代理（如果你的代理端口是错误的，找到你自己梯子的端口后再 使用 1cmd 命令 设置）
+git config --global --unset http.proxy 
+git config --global --unset https.proxy
+
+3 检测是否 已经设置好代理了
+git config --global --edit
+里面有你设置的 端口 就说明设置config成功了
+
+4 检测能否获取github的数据
+git clone https://github.com/github/gitignore.git
+
+
+```
+
+[]()
+
+```
+检测代理
+原来是需要重新设置代理
+
+cmd 打开不是poweshell
+curl -x http://127.0.0.1:17890 https://github.com
+
+C:\Users\luojuan\qingyun\resources\static\clash>curl -x http://127.0.0.1:17890 https://github.com
+curl: (35) Recv failure: Connection was aborted
+
+C:\Users\luojuan\qingyun\resources\static\clash>git config --global http.proxy http://127.0.0.1:7890
+
+C:\Users\luojuan\qingyun\resources\static\clash>git config --global https.proxy http://127.0.0.1:7890
+
+C:\Users\luojuan\qingyun\resources\static\clash>curl -x http://127.0.0.1:17890 https://github.com
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html
+  lang="en"
+```
+
+![image-20250316230919332](D:/%E7%BC%96%E7%A8%8Bjupyter/%E5%93%8E%E8%87%AA%E5%AD%A6%E6%98%AF%E9%97%A8%E6%89%8B%E8%89%BA/%E4%B8%8A%E6%89%8B%E5%86%99%E7%A8%8B%E5%BA%8F/the-craft-of-selfteaching/images/image-20250316230919332.png)
+
+```
+commit 739ea4d0ea90099fb5a292ffd0a163db99d62551
+Author: luo57wuqi <3206178825@qq.com>
+Date:   Sun Mar 16 17:44:36 2025 +0800
+
+    我克隆成功了自学是门手艺这个代码了，哈哈
+q
+
+git log 按下 q 退出 
+```
+
