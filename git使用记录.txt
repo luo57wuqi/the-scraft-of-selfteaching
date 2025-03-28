@@ -1,0 +1,20 @@
+1 jupyter 有自动保存的配置 ----菜单栏
+2 关闭前确保保存了
+
+3 遇到：
+---结束的换行符会替换--遇到的replace 不影响
+$ git add Part.1.A.better.teachyourself.ipynb
+warning: in the working copy of 'Part.1.A.better.teachyourself.ipynb', LF will b
+e replaced by CRLF the next time Git touches it
+Git 检测到你工作副本中的该文件使用了 LF 作为行结束符，并且它配置为在将文件写入磁盘时会把 LF 转换为 CRL
+复制到缓存区域的是hi LF会在下一次被替换为 CRLF
+
+----- 不用管---对于我写笔记和写代码的文件没影响
+
+自己使用了
+  git rm --cached -r .
+  git reset --hard
+  git add .
+结果第一个命令是清楚git缓存区域---结果是更高的jupyter的文本数据没了。但是其他文件是存在的---可能原因是自己没有保存包
+
+
